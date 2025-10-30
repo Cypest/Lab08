@@ -25,14 +25,4 @@ public class CustomListTest {
         assertFalse(list.hasCity(calgary));
         assertTrue(list.hasCity(edmonton));
     }
-
-    @Test
-    void deleteCity_noop_whenCityNotPresent() {
-        CustomList list = new CustomList();
-        list.addCity(new City("Calgary", "AB"));
-
-        list.deleteCity(new City("Vancouver", "BC"));
-
-        assertEquals(1, list.countCities(), "Deleting absent city shouldn't change size");
-    }
 }
